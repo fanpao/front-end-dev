@@ -8,6 +8,9 @@
     font-weight: normal;
     font-style: normal;
 }
+html,body{
+    width: 100%;
+}
 .thumbnail-title{
     background-color: rgb(96, 125, 139);
     color: rgb(202, 238, 255);
@@ -19,6 +22,8 @@
 body{
     font-size: 10px;
     background-color: rgb(149, 194, 215);
+    display: flex;
+    flex-direction: column;
 }
 a{
     text-decoration: none;
@@ -38,14 +43,55 @@ a{
 .thumbnail-item{
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100% ,100% ,100% ,0.8);
-    display: block;
+    display: inline-block;
+    width: 120px;
 }
 
 .thumbnail-list{
     list-style: none;
     padding: 0;
+
+    white-space: nowrap;
+    overflow-x: auto;
+
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .thumbnail-item + .thumbnail-item{
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+}
+.detail-image-container{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail-image{
+    width: 90%;
+}
+
+.main-header{
+    flex: 0 1 auto;
+}
+
+.main-container{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-image-frame{
+    text-align: center;
+    position: relative;
+}
+
+.detail-image-title{
+    color: white;
+    font-size: 40px;
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
 }
