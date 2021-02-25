@@ -57,6 +57,8 @@ a{
     flex: 0 1 auto;
     display: flex;
     justify-content: space-between;
+
+    padding: 20px 0;
 }
 
 .thumbnail-item + .thumbnail-item{
@@ -85,6 +87,13 @@ a{
 .detail-image-frame{
     text-align: center;
     position: relative;
+
+    transition: transform 333ms;
+}
+
+.is-tiny{
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 
 .detail-image-title{
@@ -95,6 +104,28 @@ a{
     bottom: -16px;
     left: 4px;
 }
+
+.hidden-detail .detail-image-container{
+    display: none;
+}
+
+.hidden-detail .thumbnail-list{
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item{
+    width: 80%;
+}
+
+.thumbnail-item{
+    transition: transform 200ms ease-in-out;
+}
+
+.thumbnail-item:hover{
+    transform: scale(1.2);
+}
+
 @media all and (min-width: 768px) {
     .main-container{
         flex-direction: row;
