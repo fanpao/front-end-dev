@@ -22,11 +22,13 @@ function setDetailsFromThumb(thumbnail){
 }
 
 function onClick(){
-    let obj = document.querySelector(THUMBNAIL_LINK_SELECTOR)
-    console.log(obj)
-    obj.addEventListener('click', function (event){
-        event.preventDefault()
-        console.log('click')
-        console.log(event)
-    })
+    let thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR)
+    for(let i = 0; i < thumbnails.length; i++){
+        thumbnails[i].addEventListener('click', function (event){
+            event.preventDefault()
+            setDetailsFromThumb(thumbnails[i])
+        })
+    }
 }
+
+onClick()
