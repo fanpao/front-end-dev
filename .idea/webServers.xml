@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="7f6009d7-1f24-4c6e-b4cd-6f5400bac606" name="mianidc.net" url="2blife.cn">
-        <fileTransfer rootFolder="/ftproot/web" host="ftp.cname-cdn.com" port="1045">
+        <fileTransfer rootFolder="/wwwroot" host="ftp.cname-cdn.com" port="1046">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
